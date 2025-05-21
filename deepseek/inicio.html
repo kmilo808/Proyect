@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROYECT - Proyectos de Ingeniería S.A.S</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2e2b2c; /* Azul oscuro corporativo */
+            --secondary: #d4af37; /* Rojo acento */
+            --dark: #2e2b2c; /* Fondo oscuro */
+            --light: #e2e2e2; /* Texto claro */
+            --gold: #e63946; /* Detalles dorados */
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--dark);
+            color: var(--light);
+            line-height: 1.6;
+        }
+        
+        /* Header con logo */
+        header {
+            background-color: var(--primary);
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .logo-text {
+            margin-left: 15px;
+        }
+        
+        .logo-main {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: white;
+            margin: 0;
+            letter-spacing: 1px;
+        }
+        
+        .logo-sub {
+            font-size: 0.9rem;
+            color: var(--light);
+            margin: 0;
+            font-weight: 300;
+        }
+        
+        .logo-sas {
+            font-size: 0.8rem;
+            color: var(--gold);
+            margin-top: 3px;
+            letter-spacing: 1px;
+        }
+        
+        /* Banner deslizable */
+        .banner {
+            width: 100%;
+            height: 150vh;
+            overflow: hidden;
+            position: relative;
+            margin-top: 80px;
+        }
+        
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .slide.active {
+            opacity: 1;
+        }
+        
+        /* Contenido principal */
+        .main-content {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: var(--gold);
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        h1::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            background: var(--secondary);
+            bottom: -10px;
+            left: 25%;
+        }
+        
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            color: var(--light);
+        }
+        
+        /* Footer con contacto */
+        footer {
+            background-color: var(--primary);
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .contact-info {
+            margin-bottom: 30px;
+        }
+        
+        .contact-info p {
+            margin: 5px 0;
+            font-size: 1rem;
+        }
+        
+        .contact-info i {
+            color: var(--gold);
+            margin-right: 10px;
+        }
+        
+        .social-links {
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            margin: 0 10px;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: var(--light);
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--secondary);
+            transform: translateY(-5px);
+        }
+        
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 60px;
+            font-size: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            z-index: 999;
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+        }
+    </style>
+        <script>
+            function mostrarSeccion(id) {
+              const secciones = document.querySelectorAll("main section");
+              secciones.forEach(sec => sec.classList.add("hidden"));
+              document.getElementById(id).classList.remove("hidden");
+            }
+            window.onload = () => {
+              mostrarSeccion("servicios");
+            };
+          </script>
+</head>
+<body class="bg-[#2e2b2c] text-white font-sans">
+    <!-- Header con logo -->
+    <header>
+        <div class="logo-container" class="bg-[#2e2b2c] p-6 flex flex-col items-center">
+            <img src="logo1sf.png" alt="Logo PROYECT" style="height: 135px;"> <!-- Reemplaza con tu logo -->        
+            <nav class="space-x-6 text-lg">
+              <button onclick="mostrarSeccion('servicios')" class="text-white hover:text-red-500 text-lg font-semibold">Servicios</button>
+              <button onclick="mostrarSeccion('nosotros')" class="text-white hover:text-red-500 text-lg font-semibold">Nosotros</button>
+              <button onclick="mostrarSeccion('contacto')" class="text-white hover:text-red-500 text-lg font-semibold">Contacto</button>
+            </nav>
+            
+        </header>
+
+        
+<main class="p-6 space-y-8">
+        <section id="servicios" class="hidden">
+          <h2 class="text-2xl font-bold text-red-500">Servicios</h2>
+          <p>A</p>
+        </section>
+    
+        <section id="nosotros" class="hidden">
+          <h2 class="text-2xl font-bold text-red-500">Sobre Nosotros</h2>
+          <h1>Ingeniería con Excelencia</h1>
+        <p>Somos especialistas en desarrollo de proyectos de ingeniería civil, eléctrica, mecánica y de automatización, comprometidos con la calidad y el medio ambiente.</p>
+        <p>Nuestro equipo multidisciplinario ofrece soluciones integrales para los sectores público y privado en Boyacá y toda Colombia.</p>
+        </section>
+    
+        <section id="contacto" class="hidden">
+          <h2 class="text-2xl font-bold text-red-500">Contacto</h2>
+          <form id="contactForm" class="space-y-2 max-w-md">
+            <input type="text" placeholder="Tu nombre" class="w-full p-2 rounded bg-[#3a3a3a] text-white border border-gray-700" required />
+            <input type="email" placeholder="Tu correo" class="w-full p-2 rounded bg-[#3a3a3a] text-white border border-gray-700" required />
+            <textarea placeholder="Mensaje" class="w-full p-2 rounded bg-[#3a3a3a] text-white border border-gray-700" required></textarea>
+            <button type="submit" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-500">Enviar</button>
+          </form>
+        </section>
+      </main>
+    
+    <!-- Banner deslizable -->
+    <div class="banner">
+        <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');">
+            <!-- Imagen de topografía -->
+        </div>
+        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');">
+            <!-- Construcción de acueductos -->
+        </div>
+        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');">
+            <!-- Alcantarillado -->
+        </div>
+        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');">
+            <!-- Vías -->
+        </div>
+        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');">
+            <!-- Instalaciones eléctricas industriales -->
+        </div>
+        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');">
+            <!-- Sistemas de bombeo -->
+        </div>
+        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');">
+            <!-- Tableros de automatización -->
+        </div>
+    </div>
+    
+    <!-- Contenido principal -->
+    <div class="main-content">
+        <h1>Ingeniería con Excelencia</h1>
+        <p>Somos especialistas en desarrollo de proyectos de ingeniería civil, eléctrica, mecánica y de automatización, comprometidos con la calidad y el medio ambiente.</p>
+        <p>Nuestro equipo multidisciplinario ofrece soluciones integrales para los sectores público y privado en Boyacá y toda Colombia.</p>
+    </div>
+    
+    <!-- Footer con contacto -->
+    <footer>
+        <div class="contact-info">
+           <i class="fas fa-phone"></i> +57 313 207 4671 &nbsp &nbsp
+           <i class="fas fa-phone"></i> +57 321 410 9835 &nbsp
+            <i class="fas fa-envelope"></i> proyectsas.ing@gmail.com
+        </div>
+        
+        <div class="social-links">
+            <a href="https://facebook.com/tupagina" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com/tucuenta" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://linkedin.com/tuperfil" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </footer>
+    
+    <!-- Botón de WhatsApp -->
+    <a href="https://wa.me/573132074671" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    
+    <script>
+        // Script para el banner deslizable
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        
+        function showSlide(n) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            currentSlide = (n + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+        
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+        
+        // Cambiar slide cada 4 segundos
+        setInterval(nextSlide, 4000);
+        
+        // Iniciar
+        showSlide(0);
+    </script>
+
+</body>
+</html>

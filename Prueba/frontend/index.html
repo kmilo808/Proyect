@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PROYECT S.A.S</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    function mostrarSeccion(id) {
+      const secciones = document.querySelectorAll("main section");
+      secciones.forEach(sec => sec.classList.add("hidden"));
+      document.getElementById(id).classList.remove("hidden");
+    }
+    window.onload = () => {
+      mostrarSeccion("servicios");
+    };
+  </script>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 30px;
+      background-color: #f5f5f5;
+      position: relative;
+    }
+
+    .logo {
+      height: 10px;
+    }
+
+    nav {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    .login-btn {
+      padding: 8px 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .banner {
+      width: 100%;
+      height: 500px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .banner img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .banner img.active {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body class="bg-[#2e2b2c] text-white font-sans">
+
+    <header class="bg-[#2e2b2c] p-6 flex flex-col items-center">
+        <img src="logo1sf.png" alt="Logo de PROYECT S.A.S" class="w-72" />
+        <nav class="space-x-6 text-lg"></nav>
+          <button onclick="mostrarSeccion('servicios')" class="text-white hover:text-red-500 text-lg font-semibold">Servicios</button>
+          <button onclick="mostrarSeccion('nosotros')" class="text-white hover:text-red-500 text-lg font-semibold">Nosotros</button>
+          <button onclick="mostrarSeccion('contacto')" class="text-white hover:text-red-500 text-lg font-semibold">Contacto</button>
+        </nav>
+        
+      </header>
+      
+      
+    <div class="banner">
+        <img src="a.jpeg" alt="Topografía" class="active">
+        <img src="b.jpeg" alt="Construcción de Acueductos">
+        <img src="c.jpeg" alt="Instalaciones Eléctricas">
+        <img src="d.jpeg" alt="Sistemas de Bombeo">
+        <img src="e.jpeg" alt="Sistemas de Bombeo">
+        <img src="f.jpeg" alt="Sistemas de Bombeo">
+      </div>
+      
+      <script>
+        const images = document.querySelectorAll('.banner img');
+        let current = 0;
+      
+        setInterval(() => {
+          images[current].classList.remove('active');
+          current = (current + 1) % images.length;
+          images[current].classList.add('active');
+        }, 4000);
+      </script>
+
+  <main class="p-6 space-y-8">
+    <section id="servicios" class="hidden">
+      <h2 class="text-2xl font-bold text-red-500">Servicios</h2>
+      <p>A</p>
+    </section>
+
+    <section id="nosotros" class="hidden">
+      <h2 class="text-2xl font-bold text-red-500">Sobre Nosotros</h2>
+      <p>A</p>
+    </section>
+
+    <section id="contacto" class="hidden">
+      <h2 class="text-2xl font-bold text-red-500">Contacto</h2>
+      <form id="contactForm" class="space-y-2 max-w-md">
+        <input type="text" placeholder="Tu nombre" class="w-full p-2 rounded bg-[#3a3a3a] text-white border border-gray-700" required />
+        <input type="email" placeholder="Tu correo" class="w-full p-2 rounded bg-[#3a3a3a] text-white border border-gray-700" required />
+        <textarea placeholder="Mensaje" class="w-full p-2 rounded bg-[#3a3a3a] text-white border border-gray-700" required></textarea>
+        <button type="submit" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-500">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="bg-[#2e2b2c] text-white text-center p-4">
+    © 2025 PROYECT S.A.S - Proyectos de Ingeniería
+  </footer>
+
+</body>
+</html>
+

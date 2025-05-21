@@ -1,0 +1,10 @@
+def saludo(nombre):
+    print(f"¡Hola, {nombre}!")
+
+saludo("Camilo")
+
+l = [1,2,3,4,5,6,7,8,9,10]
+for x in l:
+    print("elemento: ", x)
+
+saludo("Camilo")
