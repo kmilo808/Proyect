@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Diseño industrial</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #2e2b2c;
+      padding: 20px;
+      color: white;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 30px;
+      background-color: #2e2b2c;
+      margin-top: -30px;
+    }
+    .menu-container {
+    display: flex;
+    gap: 90px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+  }
+
+  .menu-item {
+    position: relative;
+    color: #b71c1c; 
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+
+  .menu-item:hover {
+    color: #ff5252; 
+  }
+
+  .submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #2c2c2c; 
+    border-radius: 8px;
+    padding: 10px 0;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.6);
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease, max-height 0.5s ease;
+    z-index: 10;
+  }
+
+  .menu-item:hover .submenu {
+    opacity: 1;
+    max-height: 400px;
+  }
+
+  .submenu p {
+    margin: 0;
+    padding: 12px 20px;
+    color: #eee;
+    font-size: 15px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .submenu p:hover {
+    background-color: #b71c1c;
+    color: #fff;
+  }
+
+    .logo {
+      height: 100px;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .logo:hover {
+      transform: scale(1.1);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+      filter: brightness(1.2);
+    }
+
+    .back-btn {
+      padding: 10px 20px;
+      background-color: #414442;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.4s ease-in-out;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .back-btn:hover {
+      background-color: #b12020;
+      transform: scale(1.1);
+    }
+
+    .content {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #393939;
+      border-radius: 10px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+    }
+
+    h1, h2 {
+      color: #b12020;
+    }
+
+    p {
+      line-height: 1.6;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    footer {
+      background-color: #2e2b2c;
+      padding: 25px 0;
+      text-align: center;
+      font-size: 0.9rem;
+      color: aliceblue;
+      margin-top: 50px;
+    }
+    .social-links {
+            margin-top: -10px;
+        }
+        
+    .social-links a {
+            display: inline-block;
+            margin: 0 10px;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: var(--light);
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+    .social-links a:hover {
+            background-color: var(--secondary);
+            transform: translateY(-5px);
+        }
+    .whatsapp-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 60px;
+            font-size: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            z-index: 999;
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+        }
+  </style>
+</head>
+<body>
+
+<header>
+
+    <a href="/index.html">
+        <img src="/imagenes/logo1sf.png" alt="Logo" class="logo">
+      </a>
+      
+  <div class="menu-container">
+    <div class="menu-item">
+      Quienes somos?
+      <div class="submenu">
+        <p onclick="location.href='/Quienes_somos/Mision_vision.html'">Mision y visión</p>
+        <p onclick="location.href='/Quienes_somos/Politicas.html'">Politicas de la empresa</p>
+      </div>
+    </div>
+  
+    <div class="menu-item">
+      Servicios
+      <div class="submenu">
+        <p onclick="location.href='/servicios/Ingenieria_civil.html'">Ingeniería civil</p>
+        <p onclick="location.href='/servicios/Ingenieria_vias.html'">Ingeniería de vías</p>
+        <p onclick="location.href='/servicios/Topografia.html'">Topografía</p>
+        <p onclick="location.href='/servicios/Diseño_industrial.html'">Diseño industrial</p>
+        <p onclick="location.href='/servicios/Arquitectura.html'">Arquitectura</p>
+        <p onclick="location.href='/servicios/Ingenieria_mecanica.html'">Ingeniería mecánica</p>
+        <p onclick="location.href='/servicios/Ingenieria_electrica.html'">Ingeniería eléctrica</p>
+        <p onclick="location.href='/servicios/Ingenieria_automatizacion.html'">Ingeniería en automatización</p>
+      </div>
+    </div>
+  
+    <div class="menu-item">
+        Documentos
+        <div class="submenu">
+          <p>
+            <a href="/imagenes/BROSHURE.pdf" download style="text-decoration: none; color: inherit;">Broshure</a>
+          </p>
+        </div>
+      </div> 
+
+    <div class="menu-item">
+      Experiencia
+      <div class="submenu">
+        <p>Servicios</p>
+      </div>
+    </div>
+  </div>
+
+  <a href="/index.html" class="back-btn">← Inicio</a>
+
+</header>
+
+<div class="content">
+  <h2>Diseño industrial</h2>
+  
+</div>
+
+<footer>
+    <div class="social-links">
+        <i class="fas fa-phone"></i> +57 313 207 4671 &nbsp &nbsp &nbsp &nbsp
+      <i class="fas fa-phone"></i> +57 321 410 9835 &nbsp &nbsp &nbsp &nbsp
+       <i class="fas fa-envelope"></i> proyectsas.ing@gmail.com &nbsp &nbsp &nbsp &nbsp
+       <a href="https://www.facebook.com/share/1EdoMvu1ub/" target="_blank"><i class="fab fa-facebook-f"></i></a>&nbsp &nbsp &nbsp 
+       <a href="https://instagram.com/tucuenta" target="_blank"><i class="fab fa-instagram"></i></a>&nbsp &nbsp &nbsp 
+       <a href="https://linkedin.com/tuperfil" target="_blank"><i class="fab fa-linkedin-in"></i></a>&nbsp &nbsp &nbsp 
+   
+      </div><br>
+  © 2011 PROYECT S.A.S - Proyectos de Ingeniería
+</footer>
+<a href="https://wa.me/573132074671" class="whatsapp-btn" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+</body>
