@@ -179,6 +179,22 @@
 </head>
 <body>
 
+<div class="hamburger" onclick="toggleMenu()">
+  ☰
+</div>
+
+<nav class="side-menu" id="sideMenu">
+  <span class="close-btn" onclick="toggleMenu()">×</span>
+  <ul>
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="servicios/Ingenieria_civil.html">Ingeniería civil</a></li>
+    <li><a href="servicios/Topografia.html">Topografía</a></li>
+    <li><a href="Quienes_somos/Mision_vision.html">Misión y visión</a></li>
+    <li><a href="Quienes_somos/Politicas.html">Políticas</a></li>
+    <li><a href="imagenes/BROSHURE.pdf" download>Broshure</a></li>
+  </ul>
+</nav>
+
 <header>
 
     <a href="../index.html">
@@ -256,5 +272,20 @@
 <a href="https://wa.me/573132074671" class="whatsapp-btn" target="_blank">
     <i class="fab fa-whatsapp"></i>
   </a>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("sideMenu");
+    menu.classList.toggle("active");
+  }
+
+  // Cerrar menú al hacer clic en un enlace
+  document.querySelectorAll('.side-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById("sideMenu").classList.remove('active');
+    });
+  });
+</script>
+
 </body>
 </html>
