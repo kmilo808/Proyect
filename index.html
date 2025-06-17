@@ -255,13 +255,13 @@
       </div>
     </div>    
 
-    <div class="menu-item"></p>
-        <p onclick="location.href='servicios/Ingenieria_electrica.html'">Experiencia
-      <div class="submenu">
-        <p>Servicios</p>
-      </div>
-    </div>
+    <div class="menu-item">
+  <p onclick="location.href='servicios/Ingenieria_electrica.html'">Experiencia</p>
+  <div class="submenu">
+    <p>Servicios</p>
   </div>
+</div>
+
   
   <button class="login-btn">Ingresar</button>
   </header>
@@ -335,7 +335,7 @@
     menu.classList.toggle("active");
   }
 
-  // Cierra el menú cuando se hace clic en un enlace del menú
+  // Cerrar menú al hacer clic en un enlace
   document.querySelectorAll('.side-menu a').forEach(link => {
     link.addEventListener('click', () => {
       document.getElementById("sideMenu").classList.remove('active');
@@ -344,5 +344,4 @@
 </script>
 
 </body>
-
 </html>
