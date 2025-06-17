@@ -200,12 +200,10 @@
 </head>
 <body>
 
-<!-- Botón Hamburguesa -->
 <div class="hamburger" onclick="toggleMenu()">
-  <i class="fas fa-bars"></i>
+  ☰
 </div>
 
-<!-- Menú lateral -->
 <nav class="side-menu" id="sideMenu">
   <span class="close-btn" onclick="toggleMenu()">×</span>
   <ul>
@@ -217,6 +215,7 @@
     <li><a href="imagenes/BROSHURE.pdf" download>Broshure</a></li>
   </ul>
 </nav>
+
 
 
   <header>
@@ -335,6 +334,13 @@
     const menu = document.getElementById("sideMenu");
     menu.classList.toggle("active");
   }
+
+  // Cierra el menú cuando se hace clic en un enlace del menú
+  document.querySelectorAll('.side-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById("sideMenu").classList.remove('active');
+    });
+  });
 </script>
 
 </body>
