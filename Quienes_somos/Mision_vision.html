@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Misión y Visión - PROYECT S.A.S</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../responsive.css">
   <style>
     body {
       margin: 0;
@@ -179,10 +179,12 @@
 </head>
 <body>
 
+<!-- Botón Hamburguesa -->
 <div class="hamburger" onclick="toggleMenu()">
   ☰
 </div>
 
+<!-- Menú lateral -->
 <nav class="side-menu" id="sideMenu">
   <span class="close-btn" onclick="toggleMenu()">×</span>
   <ul>
@@ -194,6 +196,7 @@
     <li><a href="imagenes/BROSHURE.pdf" download>Broshure</a></li>
   </ul>
 </nav>
+
 
 <header>
 
@@ -279,13 +282,14 @@
     menu.classList.toggle("active");
   }
 
-  // Cerrar menú al hacer clic en un enlace
+  // Cierra el menú cuando se hace clic en un enlace
   document.querySelectorAll('.side-menu a').forEach(link => {
     link.addEventListener('click', () => {
       document.getElementById("sideMenu").classList.remove('active');
     });
   });
 </script>
+
 
 </body>
 </html>
