@@ -20,10 +20,10 @@
   height: 100%;
   padding: 20px;
   z-index: 1000;
-  transform: translateX(-100%);
+  transform: translateX(-100%); /* IMPORTANTE */
   transition: transform 0.3s ease;
   overflow-y: auto;
-}
+} 
 
 /* Mostrar menú cuando tiene clase .active */
 .side-menu.active {
