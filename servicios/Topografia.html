@@ -190,13 +190,27 @@
   max-width: 60%;
 }
 
-.topografia-slider {
-  flex: 1;
-  max-width: 35%;
+.image-slider {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
   position: relative;
   overflow: hidden;
   border-radius: 10px;
 }
+
+.image-slider img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  display: none;
+}
+
+.image-slider img.active {
+  display: block;
+}
+
 
 .slider-wrapper {
   display: flex;
