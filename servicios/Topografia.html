@@ -174,14 +174,14 @@
         
         .whatsapp-btn:hover {
             transform: scale(1.1);
-        
-        .topografia-container {
+        }
+  .topografia-container {
   display: flex;
-  gap: 30px;
+  gap: 40px;
   justify-content: space-between;
   align-items: flex-start;
-  margin-top: 40px;
   flex-wrap: wrap;
+  margin-top: 40px;
 }
 
 .topografia-texto {
@@ -190,42 +190,53 @@
   max-width: 60%;
 }
 
-.topografia-texto p {
-  font-size: 16px;
-  line-height: 1.6;
-}
-
-.topografia-imagenes {
+.topografia-slider {
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  min-width: 250px;
   max-width: 35%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
 }
 
-.topografia-imagenes img {
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  object-fit: cover;
+.slider-wrapper {
+  display: flex;
+  width: 300%;
+  animation: deslizar 12s infinite ease-in-out;
 }
+
+.slider-wrapper img {
+  width: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
+  transition: opacity 1s ease;
+  border-radius: 10px;
+}
+
+@keyframes deslizar {
+  0%, 33% {
+    transform: translateX(0);
+  }
+  34%, 66% {
+    transform: translateX(-100%);
+  }
+  67%, 100% {
+    transform: translateX(-200%);
+  }
+}
+
 @media (max-width: 768px) {
   .topografia-container {
     flex-direction: column;
     align-items: center;
   }
 
-  .topografia-texto, .topografia-imagenes {
+  .topografia-texto,
+  .topografia-slider {
     max-width: 100%;
   }
+}
+</style>
 
-  .topografia-texto p {
-    text-align: justify;
-  }
-}
-}
-  </style>
 </head>
 <body>
 
@@ -322,9 +333,12 @@
     </p>
   </div>
 
-  <div class="topografia-imagenes">
-    <img src="../imagenes/atopo.JPG" alt="Topografía 1">
-    <img src="../imagenes/btopo.JPG" alt="Topografía 2">
+  <div class="topografia-slider">
+    <div class="slider-wrapper">
+      <img src="../imagenes/topografia1.jpg" alt="Topografía 1" class="active">
+      <img src="../imagenes/topografia2.jpg" alt="Topografía 2">
+      <img src="../imagenes/topografia3.jpg" alt="Topografía 3">
+    </div>
   </div>
 </div>
 
