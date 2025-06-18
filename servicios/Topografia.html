@@ -174,7 +174,57 @@
         
         .whatsapp-btn:hover {
             transform: scale(1.1);
-        }
+        
+        .topografia-container {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.topografia-texto {
+  flex: 1;
+  min-width: 300px;
+  max-width: 60%;
+}
+
+.topografia-texto p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.topografia-imagenes {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 250px;
+  max-width: 35%;
+}
+
+.topografia-imagenes img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  .topografia-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .topografia-texto, .topografia-imagenes {
+    max-width: 100%;
+  }
+
+  .topografia-texto p {
+    text-align: justify;
+  }
+}
+}
   </style>
 </head>
 <body>
@@ -250,19 +300,34 @@
   <p>Ofrecemos soluciones topográficas integrales apoyadas en herramientas de última generación, como drones, 
     sistemas RTK, niveles de precisión, estaciones totales y GPS. Adaptamos nuestra tecnología a las necesidades 
     específicas de cada proyecto para garantizar resultados confiables y precisos.
-Nuestros servicios de topografía están enfocados hacia:
-•	Legalización y regularización de propiedades, Calculo de áreas y Loteos, Desenglobe y subdivisión de predios, verificación de linderos.<br>
-<br><br>•	Toma de topografía de campo para el diseño y planificación de obras civiles, obras eléctricas, vías, puentes, estructuras saneamiento básico, sector petrolero, sector minero, batimetrías, acueductos, alcantarillados, drenajes, Labores de exploración geológica y sísmica, construcción de parqueaderos o plataformas de grandes áreas y otros, bien sea de pequeña, mediana o gran escala.
-<br><br>•	Levantamiento topográfico de estructuras para diagnósticos patológicos y estructurales.
-<br><br>•	Replanteos y materialización de puntos para construcción de obras de infraestructura urbanística, obras viales, estructuras hidráulicas, sector petrolero, construcciones civiles, obras de infraestructura eléctrica, montajes industriales, estructuras metálicas, cimentaciones y fundaciones.
-<br><br>•	Seguimiento y control de niveles, áreas, ubicaciones, volúmenes en obras civiles, obras eléctricas, vías, puentes, estructuras saneamiento básico, acueductos, alcantarillados, cálculo y control de movimiento de tierras, volúmenes de corte y relleno, Construcción de túneles, avance de labores mineras, control de niveles en cimentaciones y fundaciones, drenajes y taludes.
-<br><br>•	Modelos digitales de elevación (MDE) para análisis y diseño.
-<br><br>•	Estructuración, interpretación y elaboración de planchas topográficas.
-<br><br>•	Amojonamientos y georreferenciación, actualización de planos a coordenadas según norma.
-<br><br>•	Levantamientos con dron e interpretación fotogramétrica profesional.
-<br><br>•	Suministro de comisiones topográficas, para el sector público privado y petrolero.<br>
+
 </p>
 </div>
+
+<div class="topografia-container">
+  <div class="topografia-texto">
+    <h2>Servicios de Topografía</h2>
+    <p>
+      Nuestros servicios de topografía están enfocados hacia:
+      <br><br>• Legalización y regularización de propiedades, Cálculo de áreas y Loteos, Desenglobe y subdivisión de predios, verificación de linderos.
+      <br><br>• Toma de topografía de campo para diseño y planificación de obras civiles, eléctricas, vías, puentes, estructuras, saneamiento básico, sector petrolero, minero, batimetrías, acueductos, alcantarillados, drenajes, geología y sísmica, plataformas y más.
+      <br><br>• Levantamiento de estructuras para diagnósticos patológicos y estructurales.
+      <br><br>• Replanteos para construcción de obras urbanísticas, viales, hidráulicas, eléctricas, montajes industriales y fundaciones.
+      <br><br>• Seguimiento y control de niveles, volúmenes, ubicaciones y movimientos de tierra.
+      <br><br>• Modelos digitales de elevación (MDE) para análisis y diseño.
+      <br><br>• Elaboración de planchas topográficas.
+      <br><br>• Amojonamientos, georreferenciación y actualización de planos.
+      <br><br>• Levantamientos con dron y fotogrametría profesional.
+      <br><br>• Suministro de comisiones topográficas.
+    </p>
+  </div>
+
+  <div class="topografia-imagenes">
+    <img src="../imagenes/topografia1.jpg" alt="Topografía 1">
+    <img src="../imagenes/topografia2.jpg" alt="Topografía 2">
+  </div>
+</div>
+
 
 <footer>
     <div class="social-links">
